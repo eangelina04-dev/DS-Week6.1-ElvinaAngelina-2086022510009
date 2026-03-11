@@ -11,20 +11,17 @@ public class TotallyNotRadicalClub {
         String inputLine = scanner.nextLine();
 
         String[] ageStrings = inputLine.split(" ");
-        for (String token : ageStrings) {
-            queue.add(token);
-        }
         
         Queue<String> valid = new PriorityQueue<>();
         Queue<String> invalid = new PriorityQueue<>();
 
-        for (String ageStr : queue) {
-            int age = Integer.parseInt(ageStr);
+        for (int index = 0; index < ageStrings.length; index++) {
+            int age = Integer.parseInt(ageStrings[index]);
             if (age >= 28 && age <= 118) {
-                valid.add(ageStr);
+                valid.add(ageStrings[index]);
                 }
             else {
-                invalid.add(ageStr);
+                invalid.add(ageStrings[index]);
 
                 }
              }
