@@ -18,8 +18,7 @@ public class TotallyNotRadicalClub {
         Queue<String> valid = new PriorityQueue<>();
         Queue<String> invalid = new PriorityQueue<>();
 
-        while (!queue.isEmpty()) {
-            String ageStr = queue.poll();
+        for (String ageStr : queue) {
             int age = Integer.parseInt(ageStr);
             if (age >= 28 && age <= 118) {
                 valid.add(ageStr);
